@@ -33,10 +33,13 @@ Template Name:Contact
             <dd class="required">
                 <textarea id="mail_contents" name="mail_contents" cols="40" rows="5"></textarea>
             </dd>
-
         </dl>
 
-        <p id="form_submit"><input type="button" id="form_submit_button" value="送信する" /></p>
+        <div class="submit-button">
+            <p id="form_submit">
+                <input type="button" id="form_submit_button" value="送信する" />
+            </p>
+        </div>
     </form>
 </diV><!--main area -->
 
