@@ -21,7 +21,7 @@ Author URI: http://example.com/
 
 @media screen and (min-width:1000px) {
 
-    /* タイトル */
+    /* ヘッダー */
     .page-header {
         width: 960px;
         padding: 40px;
@@ -30,10 +30,12 @@ Author URI: http://example.com/
         border-bottom: solid 0.8px#707070;
     }
 
+    /* ヘッダータイトル */
     .page-header a {
         text-decoration: none;
     }
 
+    /* ヘッダータイトル文字 */
     .web-title {
         font-family: AGaramondPro-Regular;
         font-size: 40px;
@@ -66,15 +68,6 @@ Author URI: http://example.com/
         width: 25%;
     }
 
-    /* 空要素 */
-    .post.is-empty {
-        height: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
     /* 画像一覧のマウスオーバー時の半透明エフェクト */
     .main-area .post a:hover img {
         opacity: 0.7;
@@ -89,6 +82,7 @@ Author URI: http://example.com/
         font-family: AGaramondPro-Regular;
     }
 
+    /* グローバルメニューリンク部分 */
     .links ul {
         list-style: none;
     }
@@ -109,8 +103,7 @@ Author URI: http://example.com/
 
     /* Aboutページ */
     .about {
-        margin-top: 30px;
-        padding-left: 15px;
+        margin-top: 5%;
         font-family: AGaramondPro-Regular;
         color: #707070;
     }
@@ -133,10 +126,13 @@ Author URI: http://example.com/
 
     /* フッター */
     footer {
-        display: flex;
-        width: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
         text-align: center;
         bottom: 0;
+        font-family: AGaramondPro-Regular;
+        color: #707070;
     }
 }
 
