@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	email = tacumin.goppy.06@vesta.ocn.ne.jp
+	name = goppy510
+[color]
+	ui = auto
+[remote "origin"]
+	url = https://github.com/goppy510/debris.git
+	fetch = +refs/heads/*:refs/remotes/origin/*

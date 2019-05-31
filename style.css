@@ -1,0 +1,194 @@
+/*
+Theme Name: debris
+Theme URI: http://wwww.yabamy.com/
+Description: サンプルテーマ
+Version: 2.0
+Author: goppy
+Author URI: http://example.com/
+*/
+
+/* フォント */
+/* AGaramondPro-Regular */
+@font-face {
+    font-family: AGaramondPro-Regular;
+    src: url('./fonts/AGaramondPro-Regular.woff') format('woff');
+}
+/* AGaramondPro-Italic */
+@font-face {
+    font-family: AGaramondPro-Italic;
+    src: url('./fonts/AGaramondPro-Italic.woff') format('woff');
+}
+
+@media screen and (min-width:1000px) {
+
+    /* タイトル */
+    .page-header {
+        width: 960px;
+        padding: 40px;
+        margin: auto ;
+        text-align: center;
+        border-bottom: solid 0.8px#707070;
+    }
+
+    .page-header a {
+        text-decoration: none;
+    }
+
+    .web-title {
+        font-family: AGaramondPro-Regular;
+        font-size: 40px;
+        color: #707070;
+    }
+
+    /* 画像一覧全体の部分 */
+    .main-area {
+        width: 1000px;
+        margin-top: 5;
+        margin-left: 25%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-flow: row wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+           -ms-flex-direction: row;
+               flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+        justify-content: space-between;
+    }
+
+    /* 画像個々に対して */
+    .post {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        width: 25%;
+    }
+
+    /* 空要素 */
+    .post.is-empty {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* 画像一覧のマウスオーバー時の半透明エフェクト */
+    .main-area .post a:hover img {
+        opacity: 0.7;
+    }
+
+    /* グローバルメニュー対応 */
+    .links {
+        float: right;
+        margin-top: 15px;
+        font-size: 12px;
+        color: #707070;
+        font-family: AGaramondPro-Regular;
+    }
+
+    .links ul {
+        list-style: none;
+    }
+
+    .links a {
+        text-decoration: none;
+        color: #707070;
+    }
+    .links a:hover {
+        text-decoration: none;
+        color: #707070;
+    }
+
+    /* 作品単体ページのタイトル部分 */
+    .single-title {
+        size: 20px;
+    }
+
+    /* Aboutページ */
+    .about {
+        margin-top: 30px;
+        padding-left: 15px;
+        font-family: AGaramondPro-Regular;
+        color: #707070;
+    }
+
+    .about ul {
+        list-style: none;
+    }
+
+    .about-head {
+        font-size: 20px;
+    }
+
+    .designer-name-jp {
+        font-size: 25px;
+    }
+
+    .designer-name-en {
+        font-family: AGaramondPro-Italic;
+    }
+
+    /* フッター */
+    footer {
+        display: flex;
+        width: 20px;
+        text-align: center;
+        bottom: 0;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:960px) {
+    /* タイトル */
+    .page-header {
+        width: 100%;
+        padding: 40px;
+        margin: auto ;
+        text-align: center;
+        border-bottom: solid 0.5px;
+        border-color: #707070;
+    }
+
+    /* 画像一覧全体の部分 */
+    .main-area {
+        width: 768px;
+        margin: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+           -ms-flex-direction: row;
+               flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+        justify-content: space-between;
+    }
+
+    /* 画像個々に対して */
+    .post {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 25%;
+    }
+
+    /* 画像一覧のマウスオーバー時の半透明エフェクト */
+    .main-area .post a:hover img {
+        opacity: 0.7;
+    }
+
+    /* グローバルメニュー対応 */
+    .links {
+        float: right; 
+    }
+    
+    .links ul {
+        list-style: none;
+    }
+}
+
+
