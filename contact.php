@@ -24,7 +24,7 @@ Template Name:Contact
                 <input type="email" id="mail_address" name="mail_address" value="" />
             </dd>
 
-            <dt class="mail-font-regular">メールアドレス<br />(確認用)<span class="mail-font-italic"> Mail Address Confirm</span></dt>
+            <dt class="mail-font-regular">メールアドレス(確認用)<span class="mail-font-italic"> Mail Address Confirm</span></dt>
             <dd>
                 <input type="email" id="mail_address_confirm" name="mail_address_confirm" value="" />
             </dd>
