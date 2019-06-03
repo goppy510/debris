@@ -15,8 +15,7 @@ Template Name:Contact
             </dd>
 
             <dt class="mail-font-regular">ふりがな<span class="mail-font-italic"> Name Reading</span></dt>
-            <dd><input type="text" id="read_1" name="read_1" value="" /> <input type="text" id="read_2" name="read_2"
-                    value="" />
+            <dd><input type="text" id="read_1" name="read_1" value="" /> <input type="text" id="read_2" name="read_2" value="" />
             </dd>
 
             <dt class="mail-font-regular">メールアドレス<span class="mail-font-italic"> Mail Address</span></dt>
@@ -44,25 +43,17 @@ Template Name:Contact
 </diV><!--main area -->
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/mailform-v7.1/js/mailform-js.php"></script>
 
-
     <!-- フリガナ自動入力ライブラリここから -->
-    <script src="<?php echo get_template_directory_uri(); ?>/mailform-v7.1/js/jquery.autoKana.js"></script>
-    <script>
-        $(function () {
-            $(this).autoKana('#name_1', '#read_1', {
-                katakana: false
-            });
-            $(this).autoKana('#name_2', '#read_2', {
-                katakana: false
-            });
+    <script type="text/javascript">
+	(function($) {
+        $.fn.autoKana( '#name_1', '#read_1', {
+            katakana: false
         });
+        $.fn.autoKana( '#name_2', '#read_2', {
+            katakana: false
+        });
+	})(jQuery);
     </script>
     <!-- フリガナ自動入力ライブラリここまで -->
-
-
-    <!-- 住所自動入力ライブラリここから -->
-    <script src="<?php echo get_template_directory_uri(); ?>/mailform-v7.1/js/ajaxzip3.js"></script>
-    <!-- 住所自動入力ライブラリここまで -->
