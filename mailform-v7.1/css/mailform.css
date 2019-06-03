@@ -46,13 +46,13 @@ form#mail_form dl dt:first-child+dd {
 	border: none;
 }
 
-form#mail_form dl dt.mail-font-regular {
+form#mail_form .mail-font-regular {
 	font-family: AGaramondPro-Regular;
 	font-size: 80%;
 	color: #707070;
 }
 
-form#mail_form dl dt.mail-font-italic {
+form#mail_form .mail-font-italic {
 	font-family: AGaramondPro-Italic;
 	font-size: 70%;
 	color: #707070;
