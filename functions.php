@@ -12,9 +12,7 @@ function read_upload_mimes($mimes)
 
 add_filter('upload_mimes', 'read_upload_mimes');
 
-/**
-* mailform-v7.1関連ファイルを読み込む
-*/
+// mailform-v7.1関連ファイルを読み込む
 function read_mailform()
 {
     $maiform_path = "/mailform-v7.1/css/mailform.css";
@@ -32,6 +30,23 @@ function read_mailform()
 }
 
 add_action('wp_enqueue_scripts', 'read_mailform');
+
+// jQuery読み込み関数
+function read_jquery()
+{
+    $jquery_path = "/js/jquery-3.4.1.min.js";
+    wp_enqueue_script('js', get_template_directory_uri().$jquery_path , array(), '1.0.0', true);
+}
+
+add_action('wp_enqueue_scripts', 'read_jquery');
+
+// プラグイン(WP Add Mime Types)
+function custom_mime_types( $mimes ) {
+    $mimes['jpg'] = 'image/jpeg';
+    return $mimes;
+  }
+
+add_filter( 'upload_mimes', 'custom_mime_types' );
 
 // サイドバー設定(今回は不要だが無いと余計なのが表示されるため記述)
 if (function_exists('register_sidebar'))
@@ -60,3 +75,5 @@ function get_thumb_image($size)
     );
     return $img;
 }
+
+?>
