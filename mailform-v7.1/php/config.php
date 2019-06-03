@@ -61,5 +61,5 @@ EOM;
 
 
 //【任意】 メールフォームを設置するサイトのドメイン -- 記入した場合はリファラチェック機能が有効になります。 --
-$rm_domain_name = 'https://www.abamy.com';
+$rm_domain_name = 'https://www.yabamy.com';
 //$rm_domain_name = '1-firststep.com';
