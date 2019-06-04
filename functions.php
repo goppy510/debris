@@ -1,5 +1,8 @@
 <?php
 
+// warning非表示
+error_reporting(0);
+
 /** フォントの読み込み */
 function read_upload_mimes($mimes)
 {
@@ -12,7 +15,9 @@ function read_upload_mimes($mimes)
 
 add_filter('upload_mimes', 'read_upload_mimes');
 
-// mailform-v7.1関連ファイルを読み込む
+/**
+* mailform-v7.1関連ファイルを読み込む
+*/
 function read_mailform()
 {
     $maiform_path = "/mailform-v7.1/css/mailform.css";
@@ -60,20 +65,33 @@ if (function_exists('register_sidebar'))
         )
     );
 
+
+// 画像のサイズを取得するための関数
+function get_image_width_height($img_url)
+{
+    $result = null;
+    $wp_content_dir = WP_CONTENT_DIR;
+    $wp_content_url = content_url();
+    //URLをローカルパスに置換
+    $img_file = str_replace($wp_content_url, $wp_content_dir, $img_url);
+    $img_size = getimagesize($img_file);
+    if ($img_size) {
+        $result = array();
+        $result['width'] = $img_size[0];
+        $result['height'] = $img_size[1];
+        return $result;
+    }
+}
+
+
 // 記事内の最初の画像をアイキャッチ画像にするための関数
-function get_thumb_image($size)
+function get_thumb_image()
 {
     global $post;
     $img = '';
-    $get_image = preg_match_all('/<img.+class=[\'"].*wp-image-([0-9]+).*[\'"].*>/i', $post->post_content, $matches);
-    $img_id = $matches[1][0];
-    $img = wp_get_attachment_image($img_id, $size, false, array(
-        'class' => 'thumbnail-image',
-        'srcset' => wp_get_attachment_image_srcset($img_id, $size),
-        'sizes' => wp_get_attachment_image_sizes($img_id, $size)
-        )
-    );
-    return $img;
+    ob_start();
+    ob_end_clean();
+    $get_image = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+    $img_url = $matches[1][0];
+    return $img_url;
 }
-
-?>
