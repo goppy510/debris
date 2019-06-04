@@ -23,7 +23,7 @@ Author URI: http://example.com/
 
     /* ヘッダー */
     .page-header {
-        width: 1000px;
+        width: 900px;
         padding: 40px;
         margin: auto;
         text-align: center;
@@ -44,7 +44,7 @@ Author URI: http://example.com/
 
     /* 画像一覧全体の部分 */
     .main-area {
-        width: 1000px;
+        width: 960px;
         margin-top: 5;
         margin-left: auto;
         margin-right: auto;
@@ -64,9 +64,10 @@ Author URI: http://example.com/
 
     /* 画像個々に対して */
     .post {
-        margin-top: 20px;
-        margin-bottom: 15px;
-        width: 25%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 3px;
+        width: auto;
     }
 
     /* 画像一覧のマウスオーバー時の半透明エフェクト */
