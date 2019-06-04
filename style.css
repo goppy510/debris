@@ -19,11 +19,11 @@ Author URI: http://example.com/
     src: url('./fonts/AGaramondPro-Italic.woff') format('woff');
 }
 
-@media screen and (min-width:1280px) {
+@media screen and (min-width:860px) {
 
     /* ヘッダー */
     .page-header {
-        width: 900px;
+        width: 770px;
         padding: 40px;
         margin: auto;
         text-align: center;
@@ -44,8 +44,8 @@ Author URI: http://example.com/
 
     /* 画像一覧全体の部分 */
     .main-area {
-        width: 960px;
-        margin-top: 5;
+        width: 860px;
+        margin-top: 15px;
         margin-left: auto;
         margin-right: auto;
         display: -webkit-box;
