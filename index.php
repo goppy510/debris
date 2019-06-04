@@ -10,9 +10,22 @@
                 <div class="post">
                     <?php
                     // 記事内の一番上の画像を取得
-                    $img_url = get_thumb_image(array(200, 300));
+                    $img_url = get_thumb_image();
+                    $img_size = get_image_width_height($img_url);
+                    $img_width = $img_size['width'];
+                    $img_height = $img_size['height'];
+                    
+                    // 画像の縦横を比較して画像サイズ決める
+                    // 横長の場合(見開きを想定)
+                    if ($img_width > $img_height) {
+                        $img_rewidth = 455;
+                        $img_reheight = 290;
+                    } else {
+                        $img_rewidth = 225;
+                        $img_reheight = 290;
+                    }
                     ?>
-                    <a href="<?php the_permalink(); ?>"><?php echo $img_url; ?></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_thumb_image(); ?>" width="<?php echo $img_rewidth; ?>" height="<?php echo $img_reheight; ?>" /></a>
                 </div><!-- post -->
         <?php endwhile; ?>
     <?php endif; ?>
