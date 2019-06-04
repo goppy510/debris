@@ -18,11 +18,11 @@
                     // 画像の縦横を比較して画像サイズ決める
                     // 横長の場合(見開きを想定)
                     if ($img_width > $img_height) {
-                        $img_rewidth = 455;
-                        $img_reheight = 290;
+                        $img_rewidth = 410;
+                        $img_reheight = 270;
                     } else {
-                        $img_rewidth = 225;
-                        $img_reheight = 290;
+                        $img_rewidth = 190;
+                        $img_reheight = 270;
                     }
                     ?>
                     <a href="<?php the_permalink(); ?>"><img src="<?php echo get_thumb_image(); ?>" width="<?php echo $img_rewidth; ?>" height="<?php echo $img_reheight; ?>" /></a>
