@@ -23,8 +23,8 @@ Author URI: http://example.com/
 
     /* ヘッダー */
     .page-header {
-        width: 770px;
-        padding: 40px;
+        width: 810px;
+        padding: 40px 0px 40px 40px;
         margin: auto;
         text-align: center;
         border-bottom: solid 0.8px#707070;
@@ -39,6 +39,30 @@ Author URI: http://example.com/
     .web-title {
         font-family: AGaramondPro-Regular;
         font-size: 40px;
+        color: #707070;
+    }
+
+    /* グローバルメニュー対応 */
+    .links {
+        float: right;
+        margin-top: 15px;
+        margin-left: auto;
+        font-size: 15px;
+        color: #707070;
+        font-family: AGaramondPro-Regular;
+    }
+
+    /* グローバルメニューリンク部分 */
+    .links ul {
+        list-style: none;
+    }
+
+    .links a {
+        text-decoration: none;
+        color: #707070;
+    }
+    .links a:hover {
+        text-decoration: none;
         color: #707070;
     }
 
@@ -73,29 +97,6 @@ Author URI: http://example.com/
     /* 画像一覧のマウスオーバー時の半透明エフェクト */
     .main-area .post a:hover img {
         opacity: 0.7;
-    }
-
-    /* グローバルメニュー対応 */
-    .links {
-        float: right;
-        margin-top: 15px;
-        font-size: 12px;
-        color: #707070;
-        font-family: AGaramondPro-Regular;
-    }
-
-    /* グローバルメニューリンク部分 */
-    .links ul {
-        list-style: none;
-    }
-
-    .links a {
-        text-decoration: none;
-        color: #707070;
-    }
-    .links a:hover {
-        text-decoration: none;
-        color: #707070;
     }
 
     /* 作品単体ページのタイトル部分 */
