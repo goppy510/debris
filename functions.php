@@ -95,3 +95,19 @@ function get_thumb_image()
     $img_url = $matches[1][0];
     return $img_url;
 }
+
+// 記事内の画像URLを配列で取得するための関数
+function get_post_image()
+{
+    global $post;
+    $img = '';
+    ob_start();
+    ob_end_clean();
+    $get_image = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+    $img_urls = [];
+    // 二重配列で投稿画像のURLを取得
+    foreach ( $matches as $match => $post_img_url) {
+        $img_urls = $post_img_url;
+    }
+    return $img_urls;
+}
