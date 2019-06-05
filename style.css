@@ -127,6 +127,33 @@ Author URI: http://example.com/
         font-family: AGaramondPro-Italic;
     }
 
+
+    /* 投稿ページ */
+    .single-img {
+        width: 430px;
+        float: left;
+    }
+    .single-content {
+        width: 430px;
+        float: right;
+    }
+    .post-text {
+        float: right;
+        margin-right: 100px;
+        margin-top: 30px;
+    }
+    .post-text .title {
+        font-family: AGaramondPro-Regular;
+        color: #707070;
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    .post-text .text {
+        font-family: AGaramondPro-Regular;
+        color: #707070;
+        font-size: 15px;
+    }
+
     /* フッター */
     footer {
         margin-left: auto;
