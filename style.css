@@ -132,6 +132,7 @@ Author URI: http://example.com/
     .single-img {
         width: 430px;
         float: left;
+        margin-top: 15px;
     }
     .single-content {
         width: 430px;
