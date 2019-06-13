@@ -4,6 +4,11 @@ Template Name:Contact
 */
 ?>
 
+<?php
+// クリックジャッキング対策
+header('X-FRAME-OPTIONS: SAMEORIGIN');
+?>
+
 <?php get_header('index'); ?>
 <div class="main-area">
     <form action="mailform-v7.1/php/mailform.php" method="post" id="mail_form">
@@ -41,19 +46,44 @@ Template Name:Contact
         </div>
     </form>
 </diV><!--main area -->
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
 
 
-    <script src="<?php echo get_template_directory_uri(); ?>/mailform-v7.1/js/mailform-js.php"></script>
 
-    <!-- フリガナ自動入力ライブラリここから -->
-    <script type="text/javascript">
-	(function($) {
+<script src="<?php echo get_template_directory_uri(); ?>/mailform-v7.1/js/mailform-js.php"></script>
+
+
+<!-- フリガナ自動入力ライブラリここから -->
+<script type="text/javascript">
+    $(function() {
         $.fn.autoKana( '#name_1', '#read_1', {
             katakana: false
         });
         $.fn.autoKana( '#name_2', '#read_2', {
             katakana: false
         });
-	})(jQuery);
-    </script>
-    <!-- フリガナ自動入力ライブラリここまで -->
+    });
+</script>
+
+<script>
+    var mail_address = document.getElementById("mail_address");
+    var mail_address_confirm = document.getElementById("mail_address_confirm");
+
+    // 特定文字以外の入力防止
+    document.addEventListener("DOMContentLoaded", function() {
+        input_limit(mail_address);
+        input_limit(mail_address_confirm);
+    });
+
+    // 特定文字以外の入力を無効化する関数
+    function input_limit(element) {
+        element.addEventListener('input', function() {
+            var input_str = element.value;
+            while(input_str.match(/[^a-z^A-Z\d.@_-]+$/)) {
+                input_str = input_str.replace(/[^a-z^A-Z\d.@_-]+$/,"");
+            }
+            element.value = input_str;
+        });
+    }
+</script>
