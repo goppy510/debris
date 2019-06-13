@@ -374,7 +374,7 @@ class Mailform {
 			$thanks_additional_headers = "From: ".$this->send_name." <".$this->send_address[0].">";
 			if ( $this->reply_mail_address === true ) {
 				$this->you_result = mb_send_mail( $this->mail_address, $this->thanks_subject, $this->thanks_body, $thanks_additional_headers );
-			}else{
+			} else {
 				$this->you_result = true;
 			}
 		}
