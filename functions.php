@@ -15,27 +15,6 @@ function read_upload_mimes($mimes)
 
 add_filter('upload_mimes', 'read_upload_mimes');
 
-/**
-* mailform-v7.1関連ファイルを読み込む
-*/
-function read_mailform()
-{
-    $maiform_path = "/mailform-v7.1/css/mailform.css";
-    $reset_path = "/mailform-v7.1/css/reset.css";
-    $style_path = "/mailform-v7.1/css/style.css";
-    $thanks_path = "/mailform-v7.1/css/thanks.css";
-    $ajaxzip3_path = "/mailform-v7.1/js/ajaxzip3.js";
-    $auto_kana_path = "/mailform-v7.1/js/jquery.autoKana.js";
-    wp_enqueue_style('mailform-v7.1', get_template_directory_uri().$maiform_path);
-    wp_enqueue_style('mailform-v7.1', get_template_directory_uri().$reset_path);
-    wp_enqueue_style('mailform-v7.1', get_template_directory_uri().$style_path);
-    wp_enqueue_style('mailform-v7.1', get_template_directory_uri().$thanks_path);
-    wp_enqueue_script('mailform-v7.1', get_template_directory_uri().$ajaxzip3_path , array(), '1.0.0', true);
-    wp_enqueue_script('mailform-v7.1', get_template_directory_uri().$auto_kana_path , array(), '1.0.0', true);
-}
-
-add_action('wp_enqueue_scripts', 'read_mailform');
-
 // jQuery読み込み関数
 function read_jquery()
 {
@@ -45,7 +24,29 @@ function read_jquery()
 
 add_action('wp_enqueue_scripts', 'read_jquery');
 
-// プラグイン(WP Add Mime Types)
+/**
+* mailform-v7.1関連ファイルを読み込む
+*/
+function read_mailform()
+{
+    $maiform_path = "/mailform-v7.1/css/mailform.css";
+    $reset_path = "/mailform-v7.1/css/reset.css";
+    $style_path = "/mailform-v7.1/css/style.css";
+    $thanks_path = "/mailform-v7.1/css/thanks.css";
+    $auto_kana_path = "/mailform-v7.1/js/jquery.autoKana.js";
+    $mailform_js = "/mailform-v7.1/js/mailform_js";
+    wp_enqueue_style('mailform-v7.1', get_template_directory_uri().$maiform_path);
+    wp_enqueue_style('mailform-v7.1', get_template_directory_uri().$reset_path);
+    wp_enqueue_style('mailform-v7.1', get_template_directory_uri().$style_path);
+    wp_enqueue_style('mailform-v7.1', get_template_directory_uri().$thanks_path);
+    wp_enqueue_script('mailform-v7.1', get_template_directory_uri().$auto_kana_path , array(), '1.0.0', true);
+    wp_enqueue_script('mailform-v7.1', get_template_directory_uri().$mailform_js , array(), '1.0.0', true);
+}
+
+add_action('wp_enqueue_scripts', 'read_mailform');
+
+
+// プラグイン(WP Add Mime Types)``
 function custom_mime_types( $mimes ) {
     $mimes['jpg'] = 'image/jpeg';
     return $mimes;
