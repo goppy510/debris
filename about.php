@@ -18,3 +18,5 @@ Template Name:About
         </ul>
     </div><!-- about -->
 </div ><!-- main-area -->
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
