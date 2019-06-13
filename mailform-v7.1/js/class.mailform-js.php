@@ -674,10 +674,6 @@ EOM;
 	
 	$( 'input#form_submit_button' ).on( 'click', required_check );
 EOM;
-		
-		
-		
-		
 		if ( file_exists( dirname( __FILE__ ) .'/../addon/confirm/confirm-button.js' ) ) {
 			include( dirname( __FILE__ ) .'/../addon/confirm/confirm-button.js' );
 		}
@@ -685,13 +681,8 @@ EOM;
 		if ( file_exists( dirname( __FILE__ ) .'/../addon/attachment/attachment-change-js.php' ) ) {
 			include( dirname( __FILE__ ) .'/../addon/attachment/attachment-change-js.php' );
 		}
-		
-		
-		
-		
 		echo <<<EOM
 
-	
 })( jQuery );
 EOM;
 		
