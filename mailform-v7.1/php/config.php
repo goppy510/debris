@@ -13,7 +13,7 @@ $rm_send_address[] = 'yabamy.001@gmail.com';
 
 
 //【必須】 サンクスページのURL -- index.htmlからの相対パス、またはhttp://からの絶対パス --
-$rm_thanks_page_url = 'thanks.html';
+$rm_thanks_page_url = '../thanks-mail.php';
 
 
 
