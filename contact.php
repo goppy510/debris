@@ -11,7 +11,7 @@ header('X-FRAME-OPTIONS: SAMEORIGIN');
 
 <?php get_header('index'); ?>
 <div class="main-area">
-    <form action="mailform-v7.1/php/mailform.php" method="post" id="mail_form">
+    <form action="<?php echo get_template_directory_uri(); ?>/mailform-v7.1/php/mailform.php" method="post" id="mail_form">
         <dl>
             <dt class="mail-font-regular">名前<span class="mail-font-italic"> Your Name</span></dt>
             <dd class="required">
