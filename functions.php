@@ -50,7 +50,7 @@ add_action('wp_enqueue_scripts', 'read_mailform');
 function custom_mime_types( $mimes ) {
     $mimes['jpg'] = 'image/jpeg';
     return $mimes;
-  }
+}
 
 add_filter( 'upload_mimes', 'custom_mime_types' );
 
@@ -82,6 +82,7 @@ function get_image_width_height($img_url)
         $result['height'] = $img_size[1];
         return $result;
     }
+    return false;
 }
 
 
@@ -112,3 +113,40 @@ function get_post_image()
     }
     return $img_urls;
 }
+
+// ヘッダ画像のアスペクト比を維持するために幅に対する高さの比率を求める関数
+function calc_header_image_rate($image_path) {
+    $header_size = getimagesize($image_path);
+    $img_width  = null;
+    $img_height = null;
+    if ($header_size) {
+        $img_width  = $header_size[0];
+        $img_height = $header_size[1];
+    }
+    $rate = floor($img_width/$img_height);
+    return $rate;
+}
+
+// カスタムヘッダー
+$header_img_path = get_bloginfo('template_url').'/img/header_logo.png';
+$width = 410;
+$rate = calc_header_image_rate($header_img_path);
+
+$custom_header = array(
+    'random-default' => false,
+    'width' => $width,
+    'height' => $width/$rate,
+    'flex-height' => true,
+    'flex-width' => true,
+    'default-text-color' => '',
+    'header-text' => true,
+    'uploads' => true,
+    // ヘッダーテキストのデフォルトの色
+    'default-text-color' => '000',
+    'wp-head-callback' => 'wphead_cb',
+    // デフォルト画像へのパス
+    'default-image' => $header_img_path,
+    'admin-head-callback'    => '',      // 管理画面で、[外観 - カスタマイズ]をプレビューするためのコールバック
+    'admin-preview-callback' => '',
+);
+add_theme_support('custom-header', $custom_header);
