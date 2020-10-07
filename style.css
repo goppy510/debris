@@ -254,10 +254,14 @@ Author URI: http://example.com/
 }
 
 #side-nav ul.menu li {
-    font-size: 13px;
-    font-size: 1.3rem;
-    color: #888;
+    font-size: 0.6rem;
+    color: #000;
     line-height: 20px;
     margin: 5px 0 0 0;
     padding-left: 10px;
+    text-decoration: none;
+}
+
+#side-nav ul.menu li a {
+    text-decoration: none;
 }
