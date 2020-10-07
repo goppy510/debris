@@ -1,4 +1,3 @@
-<div class="sidebar">
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
-<?php endif; ?>
-</div>
+<div id="side-nav">
+  <?php wp_nav_menu(array('theme_location' => 'sidebar_nav')); ?>
+</div><!-- end of #side-nav -->
