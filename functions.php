@@ -112,3 +112,12 @@ function get_post_image()
     }
     return $img_urls;
 }
+
+
+
+/**
+ * サイドメニューの設定
+ */
+register_nav_menus(array(
+    'sidebar_nav'=>'Sidebar_Navigation'
+));
