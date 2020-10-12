@@ -1,4 +1,4 @@
-<?php get_header('index'); ?>
+<?php get_header(); ?>
 <div class="main-area">
     <?php
     // inexに表示するコンテンツ数を無制限化
