@@ -10,13 +10,8 @@ Author URI: http://example.com/
 /* フォント */
 /* AGaramondPro-Regular */
 @font-face {
-    font-family: AGaramondPro-Regular;
-    src: url('./fonts/AGaramondPro-Regular.woff') format('woff');
-}
-/* AGaramondPro-Italic */
-@font-face {
-    font-family: AGaramondPro-Italic;
-    src: url('./fonts/AGaramondPro-Italic.woff') format('woff');
+    font-family: BumbumType-AlbraLight;
+    src: url('./fonts/BumbumType-AlbraLight.otf') format('opentype');
 }
 
 @media screen and (min-width:860px) {
@@ -248,21 +243,29 @@ Author URI: http://example.com/
 * グローバルメニュー
 */
 
-#side-nav ul.menu {
+#side-nav .menu {
     list-style: none;
     margin: 5px;
+    position: relative;
 }
 
-#side-nav ul.menu li {
-    font-size: 0.6rem;
+/* メニューの文字に対する操作 */
+#side-nav .menu li {
+    font-size: 0.7rem;
     color: #000;
-    line-height: 20px;
-    margin: 5px 0 0 0;
-    padding-left: 10px;
     text-decoration: none;
+    font-family: BumbumType-AlbraLight;
 }
 
-#side-nav ul.menu li a {
+#side-nav .menu li a {
+    width: 120px;
+    height: 30px;
     text-decoration: none;
     color:#000;
+    position: relative;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: -1px;
+    padding-left: 20px;
+    display: block;
 }
