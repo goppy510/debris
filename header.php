@@ -25,6 +25,12 @@
             </ul>
         </div><!-- links -->
         <a href="<?php echo esc_url(home_url( '/' )); ?>">
-            <span class="web-title">Takanashi Design</span>
+            <!-- ヘッダー画像が設定されている場合 -->
+            <?php if ( get_header_image() ) : ?>
+                <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+            <!-- ヘッダー画像が設定されていない場合 -->
+            <?php else: ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/header_logo.png">
+            <?php endif; ?>
         </a>
     </div><!-- page-header -->

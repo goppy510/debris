@@ -1,4 +1,4 @@
-<?php get_header('index'); ?>
+<?php get_header(); ?>
 <div class="main-area">
     <?php
     // inexに表示するコンテンツ数を無制限化
@@ -14,7 +14,7 @@
                     $img_size = get_image_width_height($img_url);
                     $img_width = $img_size['width'];
                     $img_height = $img_size['height'];
-                    
+
                     // 画像の縦横を比較して画像サイズ決める
                     // 横長の場合(見開きを想定)
                     if ($img_width > $img_height) {
