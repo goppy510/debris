@@ -73,8 +73,8 @@ Author URI: http://example.com/
         flex-flow: row wrap;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-           -ms-flex-direction: row;
-               flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         -ms-flex-pack: distribute;
@@ -184,7 +184,7 @@ Author URI: http://example.com/
     #page-top a:hover {
         text-decoration: none;
         background: #999;
-  }
+    }
 }
 
 @media only screen and (min-width:768px) and (max-width:960px) {
@@ -207,10 +207,10 @@ Author URI: http://example.com/
         display: flex;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-           -ms-flex-direction: row;
-               flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
         -ms-flex-pack: distribute;
         justify-content: space-between;
     }
@@ -232,7 +232,7 @@ Author URI: http://example.com/
     .links {
         float: right; 
     }
-    
+
     .links ul {
         list-style: none;
     }
