@@ -4,12 +4,7 @@
 /* AGaramondPro-Regular */
 @font-face {
     font-family: AGaramondPro-Regular;
-    src: url('../../fonts/AGaramondPro-Regular.woff') format('woff');
-}
-/* AGaramondPro-Italic */
-@font-face {
-    font-family: AGaramondPro-Italic;
-    src: url('../../fonts/AGaramondPro-Italic.woff') format('woff');
+    src: url('../../fonts/AGaramondPro-Regular.otf') format('open-type');
 }
 
 form#mail_form {
