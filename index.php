@@ -14,7 +14,7 @@
                     $img_size = get_image_width_height($img_url);
                     $img_width = $img_size['width'];
                     $img_height = $img_size['height'];
-                    
+
                     // 画像の縦横を比較して画像サイズ決める
                     // 横長の場合(見開きを想定)
                     if ($img_width > $img_height) {
@@ -30,6 +30,7 @@
         <?php endwhile; ?>
     <?php endif; ?>
 </div><!-- main-area -->
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
+<?php get_sidebar(); ?>
+
 
