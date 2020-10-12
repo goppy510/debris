@@ -230,7 +230,7 @@ Author URI: http://example.com/
 
     /* グローバルメニュー対応 */
     .links {
-        float: right; 
+        float: right;
     }
 
     .links ul {
