@@ -52,5 +52,4 @@
     </div><!-- single-content -->
 </div><!-- image-area -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
