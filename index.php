@@ -31,6 +31,5 @@
     <?php endif; ?>
 </div><!-- main-area -->
 <?php get_footer(); ?>
-<?php get_sidebar(); ?>
 
 
