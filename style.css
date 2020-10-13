@@ -22,7 +22,7 @@ Author URI: http://example.com/
         padding: 40px 0px 40px 40px;
         margin: auto;
         text-align: center;
-        border-bottom: solid 0.8px#707070;
+        border-bottom: solid 1px #000;
     }
 
     /* ヘッダータイトル */
@@ -194,8 +194,7 @@ Author URI: http://example.com/
         padding: 40px;
         margin: auto ;
         text-align: center;
-        border-bottom: solid 0.5px;
-        border-color: #707070;
+        border-bottom: solid 1px #000;
     }
 
     /* 画像一覧全体の部分 */
@@ -248,7 +247,7 @@ Author URI: http://example.com/
 }
 
 #side-line {
-    margin-left: 80px;
+    margin-left: 150px;
     height: 300px;
     border-left: thin #000 solid;
     position: absolute;
@@ -256,6 +255,7 @@ Author URI: http://example.com/
 
 #side-nav .menu {
     list-style: none;
+    padding-top: 49px;
     padding-left: 10px;
     position: absolute;
 }
