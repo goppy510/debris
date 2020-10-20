@@ -272,26 +272,28 @@ Author URI: http://example.com/
     position: absolute;
 }
 
-/* メニューの文字に対する操作 */
-#side-nav .menu li {
-    font-size: 15px;
-    color: #000;
-    text-decoration: none;
-    font-family: BumbumType-AlbraRegular;
-    position: relative;
-}
-
 /* メニューのリンクに対する操作 */
 #side-nav .menu li a {
+    position: relative;
+    display: block;
     width: 120px;
     height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     text-decoration: none;
     color:#000;
-    position: relative;
-    line-height: 30px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: block;
     background-color: #FFF;
-    letter-spacing: 0.06em
+    font-family: BumbumType-AlbraRegular;
+    letter-spacing: 0.06em;
+    font-size: 15px;
+    display: -webkit-box; /* safari, Chrome */
+    display: -moz-box;    /* Firefox */
+    display: -o-box;      /* Opera */
+    display: -ms-box;     /* IE */
+    display: box;         /* ベンダープレフィックスなし */
+    -webkit-box-align: center; /* safari, Chrome */
+    -moz-box-align: center;    /* Firefox */
+    -o-box-align: center;      /* Opera */
+    -ms-box-align: center;     /* IE */
+    box-align: center;         /* ベンダープレフィックスなし */
 }
