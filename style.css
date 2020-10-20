@@ -14,6 +14,16 @@ Author URI: http://example.com/
     src: url('./fonts/BumbumType-AlbraLight.otf') format('opentype');
 }
 
+@font-face {
+    font-family: BumbumType-AlbraRegular;
+    src: url('./fonts/BumbumType-AlbraRegular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: AGaramondPro-Regular;
+    src: url('./fonts/AGaramondPro-Regular.otf') format('opentype');
+}
+
 @media screen and (min-width:860px) {
 
     /* ヘッダー */
@@ -246,6 +256,7 @@ Author URI: http://example.com/
     position: relative;
 }
 
+/* サイドメニューにある縦棒 */
 #side-line {
     margin-left: 150px;
     height: 300px;
@@ -253,6 +264,7 @@ Author URI: http://example.com/
     position: absolute;
 }
 
+/* サイドメニューのエリア */
 #side-nav .menu {
     list-style: none;
     padding-top: 49px;
@@ -262,13 +274,14 @@ Author URI: http://example.com/
 
 /* メニューの文字に対する操作 */
 #side-nav .menu li {
-    font-size: 0.7rem;
+    font-size: 15px;
     color: #000;
     text-decoration: none;
-    font-family: BumbumType-AlbraLight;
+    font-family: BumbumType-AlbraRegular;
     position: relative;
 }
 
+/* メニューのリンクに対する操作 */
 #side-nav .menu li a {
     width: 120px;
     height: 30px;
@@ -280,4 +293,5 @@ Author URI: http://example.com/
     margin-bottom: 5px;
     display: block;
     background-color: #FFF;
+    letter-spacing: 0.06em
 }
