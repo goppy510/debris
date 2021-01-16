@@ -22,33 +22,30 @@
 </div>
 
 <script>
-function() {
-    // 縦線には文字の中央が重なるようにするためメニューの文字数からスライドするpxを計算する
-    let txt = $(this).text();
-    let textwidth = textWidth(txt);
-    console.log(textWidth);
-    menuLength = $(this).text().length;
-
-    let width = 120;
-    let fontSize = 15;
-    let letterSpacing = 1.0;
-    let borderWidth = 0.5;
-    let padding = 10;
-    let letterPx = menuLength * (fontSize + letterSpacing);
-    var slidePx = null;
-    if (menuLength%2==1) {
-        slidePx = width-(width-letterPx)+letterPx/2 + padding + borderWidth;
-    } else {
-        slidePx = letterPx/2  - (fontSize+letterSpacing)/2;
+// 画像によって線の上に来る文字を調整する必要がある
+// 何番目のliかで値を変える
+$('.side-nav li').hover(
+    function() {
+        let index = $('.side-nav li').index(this);
+        // topの場合
+        if (index === 0) {
+            $(this).stop(false, false).animate({'margin-left': '-35px'}, 300);
+        }
+        // aboutの場合
+        if (index === 1) {
+            $(this).stop(false, false).animate({'margin-left': '-47px'}, 300);
+        }
+        // workの場合
+        if (index === 2) {
+            $(this).stop(false, false).animate({'margin-left': '-40px'}, 300);
+        }
+        // contactの場合
+        if (index === 3) {
+            $(this).stop(false, false).animate({'margin-left': '-58px'}, 300);
+        }
+    },
+    function() {
+        $(this).stop(false, false).animate({'margin-left': '0px'}, 300);
     }
-    $(this).stop(true, true).animate({right: 25}, 300);
-}
 );
-$('#side-nav .menu li a').mouseleave(
-function() {
-    menuLength = null;
-    $(this).stop(true, true).animate({right: 0}, 300);
-}
-);
-});
 </script>
