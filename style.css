@@ -10,237 +10,224 @@ Author URI: http://example.com/
 /* フォント */
 /* AGaramondPro-Regular */
 @font-face {
-    font-family: AGaramondPro-Regular;
-    src: url('./fonts/AGaramondPro-Regular.woff') format('woff');
+    font-family: BumbumType-AlbraLight;
+    src: url('./fonts/BumbumType-AlbraLight.otf') format('opentype');
 }
-/* AGaramondPro-Italic */
+
 @font-face {
+    font-family: BumbumType-AlbraRegular;
+    src: url('./fonts/BumbumType-AlbraRegular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: AGaramondPro-Regular;
+    src: url('./fonts/AGaramondPro-Regular.otf') format('opentype');
+}
+
+
+/* ヘッダー枠 */
+.page-header {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: solid 1px #000;
+}
+
+/* ヘッダータイトル */
+.page-header a {
+    text-decoration: none;
+}
+/* ヘッダー画像 */
+.page-header img {
+    margin: 200px auto;
+    width: 500px;
+    height: auto;
+}
+/* ヘッダータイトル文字 */
+.web-title {
+    font-family: AGaramondPro-Regular;
+    font-size: 40px;
+    color: #707070;
+}
+
+/* グローバルメニュー対応 */
+.links {
+    float: right;
+    margin-top: 15px;
+    margin-left: auto;
+    font-size: 15px;
+    color: #707070;
+    font-family: AGaramondPro-Regular;
+}
+
+/* グローバルメニューリンク部分 */
+.links ul {
+    list-style: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: #707070;
+}
+.links a:hover {
+    text-decoration: none;
+    color: #707070;
+}
+
+/* 画像一覧全体の部分 */
+.main-area {
+    width: 860px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-between;
+}
+
+/* 画像個々に対して */
+.post {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px;
+    width: auto;
+}
+
+/* 画像一覧のマウスオーバー時の半透明エフェクト */
+.main-area .post a:hover img {
+    opacity: 0.7;
+}
+
+/* 作品単体ページのタイトル部分 */
+.single-title {
+    size: 20px;
+}
+
+/* Aboutページ */
+.about {
+    margin-top: 5%;
+    font-family: AGaramondPro-Regular;
+    color: #707070;
+}
+
+.about ul {
+    list-style: none;
+}
+
+.about-head {
+    font-size: 20px;
+}
+
+.designer-name-jp {
+    font-size: 25px;
+}
+
+.designer-name-en {
     font-family: AGaramondPro-Italic;
-    src: url('./fonts/AGaramondPro-Italic.woff') format('woff');
-}
-
-@media screen and (min-width:860px) {
-
-    /* ヘッダー */
-    .page-header {
-        width: 810px;
-        padding: 40px 0px 40px 40px;
-        margin: auto;
-        text-align: center;
-        border-bottom: solid 0.8px#707070;
-    }
-
-    /* ヘッダータイトル */
-    .page-header a {
-        text-decoration: none;
-    }
-
-    /* ヘッダータイトル文字 */
-    .web-title {
-        font-family: AGaramondPro-Regular;
-        font-size: 40px;
-        color: #707070;
-    }
-
-    /* グローバルメニュー対応 */
-    .links {
-        float: right;
-        margin-top: 15px;
-        margin-left: auto;
-        font-size: 15px;
-        color: #707070;
-        font-family: AGaramondPro-Regular;
-    }
-
-    /* グローバルメニューリンク部分 */
-    .links ul {
-        list-style: none;
-    }
-
-    .links a {
-        text-decoration: none;
-        color: #707070;
-    }
-    .links a:hover {
-        text-decoration: none;
-        color: #707070;
-    }
-
-    /* 画像一覧全体の部分 */
-    .main-area {
-        width: 860px;
-        margin-top: 15px;
-        margin-left: auto;
-        margin-right: auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        flex-flow: row wrap;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-           -ms-flex-direction: row;
-               flex-direction: row;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        -ms-flex-pack: distribute;
-        justify-content: space-between;
-    }
-
-    /* 画像個々に対して */
-    .post {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 3px;
-        width: auto;
-    }
-
-    /* 画像一覧のマウスオーバー時の半透明エフェクト */
-    .main-area .post a:hover img {
-        opacity: 0.7;
-    }
-
-    /* 作品単体ページのタイトル部分 */
-    .single-title {
-        size: 20px;
-    }
-
-    /* Aboutページ */
-    .about {
-        margin-top: 5%;
-        font-family: AGaramondPro-Regular;
-        color: #707070;
-    }
-
-    .about ul {
-        list-style: none;
-    }
-
-    .about-head {
-        font-size: 20px;
-    }
-
-    .designer-name-jp {
-        font-size: 25px;
-    }
-
-    .designer-name-en {
-        font-family: AGaramondPro-Italic;
-    }
-
-
-    /* 投稿ページ */
-    .single-img {
-        width: 430px;
-        float: left;
-        margin-top: 15px;
-    }
-    .single-content {
-        width: 430px;
-        float: right;
-    }
-    .post-text {
-        float: right;
-        margin-right: 100px;
-        margin-top: 30px;
-    }
-    .post-text .title {
-        font-family: AGaramondPro-Regular;
-        color: #707070;
-        font-size: 25px;
-        margin-bottom: 25px;
-    }
-    .post-text .text {
-        font-family: AGaramondPro-Regular;
-        color: #707070;
-        font-size: 15px;
-    }
-
-    /* フッター */
-    footer {
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        text-align: center;
-        bottom: 0;
-        font-family: AGaramondPro-Regular;
-        color: #707070;
-    }
-
-    /*
-    ページのトップに戻る処理のエフェクト
-    */
-    #page-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        font-size: 77%;
-    }
-    #page-top a {
-        background: #707070;
-        text-decoration: none;
-        color: #fff;
-        font-family: AGaramondPro-Regular;
-        width: 100px;
-        padding: 30px 0;
-        text-align: center;
-        display: block;
-        border-radius: 5px;
-    }
-    #page-top a:hover {
-        text-decoration: none;
-        background: #999;
-  }
-}
-
-@media only screen and (min-width:768px) and (max-width:960px) {
-    /* タイトル */
-    .page-header {
-        width: 100%;
-        padding: 40px;
-        margin: auto ;
-        text-align: center;
-        border-bottom: solid 0.5px;
-        border-color: #707070;
-    }
-
-    /* 画像一覧全体の部分 */
-    .main-area {
-        width: 768px;
-        margin: auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-           -ms-flex-direction: row;
-               flex-direction: row;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        -ms-flex-pack: distribute;
-        justify-content: space-between;
-    }
-
-    /* 画像個々に対して */
-    .post {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        padding: 5px;
-        width: 25%;
-    }
-
-    /* 画像一覧のマウスオーバー時の半透明エフェクト */
-    .main-area .post a:hover img {
-        opacity: 0.7;
-    }
-
-    /* グローバルメニュー対応 */
-    .links {
-        float: right; 
-    }
-    
-    .links ul {
-        list-style: none;
-    }
 }
 
 
+/* 投稿ページ */
+.single-img {
+    width: 430px;
+    float: left;
+    margin-top: 15px;
+}
+.single-content {
+    width: 430px;
+    float: right;
+}
+.post-text {
+    float: right;
+    margin-right: 100px;
+    margin-top: 30px;
+}
+.post-text .title {
+    font-family: AGaramondPro-Regular;
+    color: #707070;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.post-text .text {
+    font-family: AGaramondPro-Regular;
+    color: #707070;
+    font-size: 15px;
+}
+
+/* フッター */
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    font-family: AGaramondPro-Regular;
+    color: #707070;
+}
+
+/*
+ページのトップに戻る処理のエフェクト
+*/
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#page-top a {
+    background: #707070;
+    text-decoration: none;
+    color: #fff;
+    font-family: AGaramondPro-Regular;
+    width: 100px;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
+
+
+/*
+* サイドメニュー
+*/
+
+.side-area {
+    position: relative;
+}
+
+/* サイドメニューにある縦棒 */
+.side-line {
+    margin-left: 150px;
+    min-height: 300px;
+    border-left: 1px #000 solid;
+    position: absolute;
+}
+
+/* メニューのリンクに対する操作 */
+.side-nav ul {
+    list-style: none;
+    /* 横棒との間隔 */
+    padding-inline-start: 5px;
+    margin-top: 240px
+}
+.side-nav img {
+    height: 30px;
+    position: relative;
+    display: block;
+    margin: 16px 0;
+    text-decoration: none;
+}

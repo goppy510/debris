@@ -30,6 +30,6 @@
         <?php endwhile; ?>
     <?php endif; ?>
 </div><!-- main-area -->
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
+
 

@@ -3,13 +3,14 @@
         <p class="copyright"><small>©2019 Takanashi Design</small></p>
         <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
     </footer>
-    <?php wp_footer(); ?> 
+    <?php wp_footer(); ?>
+
     <script>
     /* top-pageに戻る処理 */
     $(function() {
         var topBtn = $('#page-top');
         topBtn.hide();
-    
+
         $(window).scroll(function() {
             if ($(this).scrollTop() > 100) {
                 topBtn.fadeIn();
@@ -25,5 +26,6 @@
             return false;
         });
     });
+
     </script>
 </html>

@@ -5,9 +5,12 @@
     <meta name="robots" content="noindex,nofollow" />
     <title><?php wp_title(' | ', true, 'right'); ?></title>
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+    <script type="text/javascript" src="http://localhost/wordpress/wp-content/themes/debris/js/jquery-3.4.1.min.js?ver=1.0.0" id="js-js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+    <?php get_sidebar(); ?>
     <div class="page-header">
         <div class="links">
             <ul>
