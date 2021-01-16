@@ -121,6 +121,12 @@ register_nav_menus(array(
     'sidebar_nav'=>'Sidebar_Navigation'
 ));
 
+// 画像パスを非表示化するためのエンコード
+function image64($file, $path) {
+	$img = base64_encode(file_get_contents($path.$file));
+	echo '<img src="data:;base64,'.$img.'">';
+}
+
 // ヘッダ画像のアスペクト比を維持するために幅に対する高さの比率を求める関数
 function calc_header_image_rate($image_path) {
     $header_size = getimagesize($image_path);
