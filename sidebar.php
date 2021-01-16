@@ -1,7 +1,7 @@
 <?php
     $path = get_template_directory_uri().'/img/';
     $images = array('top_side.png', 'about_side.png', 'work_side.png', 'contact_side.png');
-    $links = array('top', 'about', 'work.', 'contact');
+    $links = array('/', 'about', 'work.', 'contact');
 ?>
 <div class="side-area">
     <div class="side-line">
@@ -11,7 +11,7 @@
                     for($i=0; $i<count($images); ++$i) {
                 ?>
                         <li>
-                            <a href="<?php echo $links[$i] ?>"><?php image64($images[$i], $path) ?></a>
+                            <a href="<?php echo esc_url(home_url($links[$i])) ?>"><?php image64($images[$i], $path) ?></a>
                         </li>
                 <?php
                     }
