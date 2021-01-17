@@ -76,8 +76,6 @@ Template Name:Contact
             </dl>
         </form>
     </div><!-- page-header -->
-
-</diV><!--main area -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
 
