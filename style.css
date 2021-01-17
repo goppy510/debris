@@ -258,3 +258,11 @@ footer {
     font-size: 16px;
     float: right;
 }
+
+/* thanksページ */
+.thanks img {
+    width: 600px;
+    height: auto;
+    margin-left: -593px;
+    margin-top: 270px;
+}
