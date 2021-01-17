@@ -5,47 +5,77 @@ Template Name:Contact
 ?>
 
 <?php
-// クリックジャッキング対策
-header('X-FRAME-OPTIONS: SAMEORIGIN');
+    // クリックジャッキング対策
+    header('X-FRAME-OPTIONS: SAMEORIGIN');
+    $headerPath = get_template_directory_uri().'/img/header/';
+    $headerImg = 'header_logo.png';
 ?>
 
-<?php get_header('index'); ?>
-<div class="main-area">
-    <form action="<?php echo get_template_directory_uri(); ?>/mailform-v7.1/php/mailform.php" method="post" id="mail_form">
-        <dl>
-            <dt class="mail-font-regular">名前<span class="mail-font-italic"> Your Name</span></dt>
-            <dd class="required">
-                <input type="text" id="name_1" name="name_1" value="" /> <input type="text" id="name_2"
-                    name="name_2" value="" />
-            </dd>
-
-            <dt class="mail-font-regular">ふりがな<span class="mail-font-italic"> Name Reading</span></dt>
-            <dd><input type="text" id="read_1" name="read_1" value="" /> <input type="text" id="read_2" name="read_2" value="" />
-            </dd>
-
-            <dt class="mail-font-regular">メールアドレス<span class="mail-font-italic"> Mail Address</span></dt>
-            <dd class="required">
-                <input type="email" id="mail_address" name="mail_address" value="" />
-            </dd>
-
-            <dt class="mail-font-regular">メールアドレス(確認用)<span class="mail-font-italic"> Mail Address Confirm</span></dt>
-            <dd>
-                <input type="email" id="mail_address_confirm" name="mail_address_confirm" value="" />
-            </dd>
-
-            <dt class="mail-font-regular">お問い合わせの内容<span class="mail-font-italic"> Mail Contents</span></dt>
-            <dd class="required">
-                <textarea id="mail_contents" name="mail_contents" cols="40" rows="5"></textarea>
-            </dd>
-        </dl>
-
-        <div class="submit-button">
-            <p id="form_submit">
-                <input type="button" id="form_submit_button" value="送信する" />
-            </p>
-        </div>
-    </form>
-</diV><!--main area -->
+<?php get_header(); ?>
+<body <?php body_class(); ?>>
+    <?php get_sidebar(); ?>
+    <div class="mini-header">
+        <?php image64($headerImg, $headerPath) ?>
+    </div>
+    <div class="page-header">
+        <div class="links">
+            <ul>
+                <?php
+                // グローバルメニューを表示する(固定ページを管理画面から作ってあること必須)
+                $main_menu = wp_get_nav_menu_items('menu', array());
+                foreach ($main_menu as $menu) {
+                    if ($menu->title != 'thanks-mail') {
+                        $icon = wp_get_attachment_image_src($menu->icon, 'full');
+                        $alt = get_post_meta($menu->icon, '_wp_attachment_image_alt', true);
+                        echo '<li><a href="'.$menu->url.'"><img src="'.$icon[0].'" alt="'.$alt.'">'.$menu->title.'</a></li>';
+                    }
+                }
+                ?>
+            </ul>
+        </div><!-- links -->
+        <form action="<?php echo get_template_directory_uri(); ?>/mailform-v7.1/php/mailform.php" method="post" id="mail_form">
+            <dl>
+                <!-- 名前 -->
+                <div>
+                    <dt class="contact-name">
+                        Name
+                    </dt>
+                    <dd class="required">
+                        <input type="text" id="name_1" name="name_1" value="" />
+                    </dd>
+                </div>
+                <!-- メールアドレス -->
+                <div>
+                    <dt class="contact-email">
+                        Email
+                    </dt>
+                    <dd class="required">
+                        <input type="email" id="mail_address" name="mail_address" value="" />
+                    </dd>
+                </div>
+                <!-- 件名 -->
+                <div>
+                    <dt class="contact-subject">
+                        Subject
+                    </dt>
+                    <dd class="required">
+                        <input type="text" id="subject" name="subject" value="" />
+                    </dd>
+                </div>
+                <!-- 本文 -->
+                <div class="message">
+                    <div class="required">
+                        <textarea id="mail_contents" name="mail_contents" cols="40" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="submit-button">
+                    <p id="form_submit">
+                        <input type="button" id="form_submit_button" value="Submit" />
+                    </p>
+                </div>
+            </dl>
+        </form>
+    </div><!-- page-header -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
 
@@ -67,23 +97,16 @@ header('X-FRAME-OPTIONS: SAMEORIGIN');
 </script>
 
 <script>
-    var mail_address = document.getElementById("mail_address");
-    var mail_address_confirm = document.getElementById("mail_address_confirm");
-
     // 特定文字以外の入力防止
     document.addEventListener("DOMContentLoaded", function() {
-        input_limit(mail_address);
-        input_limit(mail_address_confirm);
-    });
-
-    // 特定文字以外の入力を無効化する関数
-    function input_limit(element) {
-        element.addEventListener('input', function() {
-            var input_str = element.value;
+        var mail_address = document.getElementById("mail_address");
+        // 特定文字以外の入力を無効化する関数
+        mail_address.addEventListener('input', function() {
+            var input_str = mail_address.value;
             while(input_str.match(/[^a-z^A-Z\d.@_-]+$/)) {
                 input_str = input_str.replace(/[^a-z^A-Z\d.@_-]+$/,"");
             }
-            element.value = input_str;
+            mail_address.value = input_str;
         });
-    }
+    });
 </script>

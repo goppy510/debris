@@ -232,3 +232,37 @@ footer {
     width: 200px;
     height: auto;
 }
+
+/* 問い合わせフォーム */
+.contact-name,
+.contact-email,
+.contact-subject {
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0;
+    font-family: AGaramondPro-Regular;
+    background-color: #C9CACA;
+    letter-spacing: 1px;
+}
+#form_submit_button {
+    appearance: none;
+    font-family: AGaramondPro-Regular;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #595857;
+    height: 30px;
+    line-height: 30px;
+    width: 120px;
+    font-size: 16px;
+    float: right;
+}
+
+/* thanksページ */
+.thanks img {
+    width: 600px;
+    height: auto;
+    margin-left: -593px;
+    margin-top: 270px;
+}

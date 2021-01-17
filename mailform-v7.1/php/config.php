@@ -13,7 +13,8 @@ $rm_send_address[] = 'yabamy.001@gmail.com';
 
 
 //【必須】 サンクスページのURL -- index.htmlからの相対パス、またはhttp://からの絶対パス --
-$rm_thanks_page_url = '../thanks-mail.php';
+// 実際のホームページによって変える
+$rm_thanks_page_url = 'http://localhost/wordpress/thanks';
 
 
 
@@ -50,7 +51,7 @@ EOM;
 
 
 //【任意】 相手に自動返信メールを送るかどうか -- 送らない場合は0、送る場合は1にしてください。 --
-$rm_reply_mail = 1;
+$rm_reply_mail = 0;
 
 
 
