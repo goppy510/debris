@@ -141,7 +141,7 @@ function calc_header_image_rate($image_path) {
 }
 
 // カスタムヘッダー
-$header_img_path = get_bloginfo('template_url').'/img/header_logo.png';
+$header_img_path = get_bloginfo('template_url').'/img/header/header_logo.png';
 $width = 410;
 $rate = calc_header_image_rate($header_img_path);
 
