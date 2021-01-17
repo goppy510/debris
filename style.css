@@ -28,6 +28,7 @@ Author URI: http://example.com/
 /* ヘッダー枠 */
 .page-header {
     width: 1200px;
+    height: 630px;
     margin: 0 auto;
     text-align: center;
     border-bottom: solid 1px #000;
@@ -111,30 +112,6 @@ Author URI: http://example.com/
 .single-title {
     size: 20px;
 }
-
-/* Aboutページ */
-.about {
-    margin-top: 5%;
-    font-family: AGaramondPro-Regular;
-    color: #707070;
-}
-
-.about ul {
-    list-style: none;
-}
-
-.about-head {
-    font-size: 20px;
-}
-
-.designer-name-jp {
-    font-size: 25px;
-}
-
-.designer-name-en {
-    font-family: AGaramondPro-Italic;
-}
-
 
 /* 投稿ページ */
 .single-img {
@@ -230,4 +207,16 @@ footer {
     display: block;
     margin: 16px 0;
     text-decoration: none;
+}
+
+
+/* Aboutページ */
+.page-header .about {
+    margin-left: -20px !important;
+}
+.about img {
+    width: 300px;
+    height: auto;
+    margin-right: 905px;
+    margin-top: 220px;
 }
