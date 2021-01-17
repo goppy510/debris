@@ -111,6 +111,4 @@ Template Name:Contact
             mail_address.value = input_str;
         });
     });
-
-
 </script>
