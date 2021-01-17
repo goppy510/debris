@@ -1,7 +1,7 @@
 <?php
-    $path = get_template_directory_uri().'/img/';
-    $images = array('top_side.png', 'about_side.png', 'work_side.png', 'contact_side.png');
-    $links = array('/', 'about', 'work.', 'contact');
+    $path = get_template_directory_uri().'/img/sidemenu/';
+    $images = array('top.png', 'about.png', 'work.png', 'contact.png');
+    $links = array('top', 'about', 'work', 'contact');
 ?>
 <div class="side-area">
     <div class="side-line">

@@ -1,20 +1,11 @@
 <?php 
 /*
-Template Name:About
+Template Name:TOP
 */
 ?>
 <?php get_header(); ?>
-<?php
-    $path = get_template_directory_uri().'/img/about/';
-    $headerPath = get_template_directory_uri().'/img/header/';
-    $img = 'designer.png';
-    $headerImg = 'header_logo.png';
-?>
 <body <?php body_class(); ?>>
     <?php get_sidebar(); ?>
-    <div class="mini-header">
-        <?php image64($headerImg, $headerPath) ?>
-    </div>
     <div class="page-header">
         <div class="links">
             <ul>
@@ -31,9 +22,15 @@ Template Name:About
                 ?>
             </ul>
         </div><!-- links -->
-        <div class="about">
-            <?php image64($img, $path) ?>
-        </div><!-- about -->
+        <a href="<?php echo esc_url(home_url( '/' )); ?>">
+            <!-- ヘッダー画像が設定されている場合 -->
+            <?php if ( get_header_image() ) : ?>
+                <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+            <!-- ヘッダー画像が設定されていない場合 -->
+            <?php else: ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/header/header_logo.png">
+            <?php endif; ?>
+        </a>
     </div><!-- page-header -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
