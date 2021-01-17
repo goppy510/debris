@@ -6,10 +6,15 @@ Template Name:About
 <?php get_header(); ?>
 <?php
     $path = get_template_directory_uri().'/img/about/';
+    $headerPath = get_template_directory_uri().'/img/header/';
     $img = 'designer.png';
+    $headerImg = 'header_logo.png';
 ?>
 <body <?php body_class(); ?>>
     <?php get_sidebar(); ?>
+    <div class="mini-header">
+        <?php image64($headerImg, $headerPath) ?>
+    </div>
     <div class="page-header">
         <div class="links">
             <ul>
