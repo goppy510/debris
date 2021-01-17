@@ -1,25 +1,43 @@
 <?php 
 /*
-Template Name:thanks-mail
+Template Name:Thanks
 */
 ?>
 
 <?php
-// クリックジャッキング対策
-header('X-FRAME-OPTIONS: SAMEORIGIN');
+    // クリックジャッキング対策
+    header('X-FRAME-OPTIONS: SAMEORIGIN');
+    $path = get_template_directory_uri().'/img/contact/';
+    $img = 'thanks.png';
+    $headerPath = get_template_directory_uri().'/img/header/';
+    $headerImg = 'header_logo.png';
 ?>
 
-<?php get_header('index'); ?>
-<div class="main-area">
-    <div id="thanks">
-        <h1>お問い合わせありがとうございました。</h1>
-        <p>これはサンクスページのサンプルです。<br />自由に書き換えたりしてご利用ください。</p>
-        <p>設置に関してわからない点や不具合などがありましたら、<a href="https://www.1-firststep.com/samplephp/support-bbs/"
-                target="_blank">サポートBBS</a>からお願いします。</p>
-        <p>無償サポートは初期状態での設置に関する質問だけであり、既存サイトへの組み込みやカスタマイズに関する内容は有料になります。(初期状態の定義については、サポートBBSをご覧ください)</p>
-        <p>カスタマイズの料金はご希望の仕様によって異なります。<a href="https://www.1-firststep.com/inquiry"
-                target="_blank">お問い合わせページ</a>からご相談ください。</p>
+<?php get_header(); ?>
+<body <?php body_class(); ?>>
+    <?php get_sidebar(); ?>
+    <div class="mini-header">
+        <?php image64($headerImg, $headerPath) ?>
     </div>
-</diV><!--main area -->
+    <div class="page-header">
+        <div class="links">
+            <ul>
+                <?php
+                // グローバルメニューを表示する(固定ページを管理画面から作ってあること必須)
+                $main_menu = wp_get_nav_menu_items('menu', array());
+                foreach ($main_menu as $menu) {
+                    if ($menu->title != 'thanks-mail') {
+                        $icon = wp_get_attachment_image_src($menu->icon, 'full');
+                        $alt = get_post_meta($menu->icon, '_wp_attachment_image_alt', true);
+                        echo '<li><a href="'.$menu->url.'"><img src="'.$icon[0].'" alt="'.$alt.'">'.$menu->title.'</a></li>';
+                    }
+                }
+                ?>
+            </ul>
+        </div><!-- links -->
+        <div class="thanks">
+            <?php image64($img, $path); ?>
+        </div>
+    </div><!-- page-header -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
