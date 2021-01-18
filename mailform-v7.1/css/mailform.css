@@ -144,7 +144,7 @@ form#mail_form .message {
 }
 form#mail_form textarea {
 	display: block;
-	width: 492px;
+	width: 490px;
 	height: 250px;
 	resize: vertical;
 	border: 1px solid #000;
