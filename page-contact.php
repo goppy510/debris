@@ -64,9 +64,11 @@ Template Name:Contact
                 </div>
                 <!-- 本文 -->
                 <div class="message">
-                    <div class="required">
-                        <textarea id="mail_contents" name="mail_contents" cols="40" rows="5"></textarea>
-                    </div>
+                    <dt>
+                        <dd class="required">
+                            <textarea id="mail_contents" name="mail_contents" cols="40" rows="5"></textarea>
+                        </dd>
+                    </dt>
                 </div>
                 <div class="submit-button">
                     <p id="form_submit">
