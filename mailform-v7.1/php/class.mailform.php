@@ -270,7 +270,7 @@ class Mailform {
 		$set_body .= PHP_EOL;
 		$set_body .= '【送信時刻】'.PHP_EOL;
 		$set_body .= $send_date;
-		
+
 		for ( $i = 1; $i < $this->order_count + 1; $i++ ) {
 			if ( $this->order_isset[$i][1] === 'mail_address_confirm' ) {
 				continue;
@@ -278,18 +278,20 @@ class Mailform {
 			if ( file_exists( dirname( __FILE__ ) .'/../addon/dear-name/name-get.php' ) ) {
 				include( dirname( __FILE__ ) .'/../addon/dear-name/name-get.php' );
 			}
-			if ( $this->post_isset[$i] !== '' ) {
-				if ( $this->order_isset[$i][2] === 'false' ) {
-					$set_body .= PHP_EOL;
-					$set_body .= PHP_EOL;
-					$set_body .= '【'.$this->order_isset[$i][3].'】'.PHP_EOL;
-					$set_body .= $this->post_isset[$i];
+			if ( $this->order_isset[$i][2] === 'false' ) {
+				$set_body .= PHP_EOL;
+				$set_body .= PHP_EOL;
+				if (trim($this->order_isset[$i][3]) !== '') {
+					$set_body .= '【'.trim($this->order_isset[$i][3]).'】'.PHP_EOL;
 				} else {
-					$set_body .= '　'.$this->post_isset[$i];
+					$set_body .= '【Message】'.PHP_EOL;
 				}
+				$set_body .= $this->post_isset[$i];
+			} else {
+				$set_body .= '　'.$this->post_isset[$i];
 			}
 		}
-		
+
 		if ( $set === 'send' ) {
 			$set_body .= PHP_EOL;
 			$set_body .= PHP_EOL;
