@@ -2,9 +2,18 @@
     $path = get_template_directory_uri().'/img/sidemenu/';
     $images = array('top.png', 'about.png', 'work.png', 'contact.png');
     $links = array('top', 'about', 'work', 'contact');
+    $headerPath = get_template_directory_uri().'/img/header/';
+    $headerImg = 'header_logo.png';
+    $uri = $_SERVER['REQUEST_URI'];
+    $page = preg_split('/[\/]+/', $uri);
 ?>
 <div class="side-area">
     <div class="side-line">
+        <div class="mini-header">
+            <?php if($page[2] !== '' && $page[2] !== 'top') { ?>
+                <?php image64($headerImg, $headerPath) ?>
+            <?php } ?>
+        </div>
         <div class="side-nav">
             <ul>
                 <?php
