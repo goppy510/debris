@@ -244,7 +244,7 @@ EOM;
 				var elements = mailform_dt.eq(i).next( 'dd' ).find( 'textarea' );
 				var dt_name  = slice_method( elements.eq(0) );
 				if ( elements.eq(0).val() === '' ) {
-					error_span( elements.eq(0), dt_name, '入力', true );
+					error_span( elements.eq(0), '本文', '入力', true );
 					error++;
 					scroll_point = compare_method( scroll_point, elements.eq(0).offset().top );
 				} else {
