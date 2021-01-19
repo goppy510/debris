@@ -233,6 +233,9 @@ footer {
     background-color: #C9CACA;
     letter-spacing: 1px;
 }
+.submit-button {
+    width: 99%;
+}
 #form_submit_button {
     appearance: none;
     font-family: AGaramondPro-Regular;
@@ -241,16 +244,20 @@ footer {
     background-color: #595857;
     height: 30px;
     line-height: 30px;
-    width: 100px;
+    width: 85px;
     font-size: 16px;
     float: right;
 }
+
 .message {
     height: 0;
-    width: 0;
+    width: 113%;
+}
+.message dt {
+    width: 0 !important;
 }
 .message dd {
-    margin-left: 0 !important;
+    margin-left: -24% !important;
 }
 /* thanksページ */
 .thanks img {
