@@ -16,6 +16,7 @@ form#mail_form dl {
 	overflow: hidden;
 	display:table;
 	vertical-align:middle;
+	width: 60%;
 }
 
 form#mail_form div {
@@ -25,18 +26,21 @@ form#mail_form div {
 form#mail_form dt {
 	display: inline-block;
 	vertical-align: middle;
-	width: 80px;
+	width: 20%;
 }
 form#mail_form dl dt {
 	clear: both;
 	float: left;
 	overflow: hidden;
 }
+form#mail_form dd {
+	width: 76%;
+}
 form#mail_form dl dd {
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 30px;
-	margin-left: 10px;
+	margin-left: 0%;
 	/* padding: 15px 0 15px 5%; */
 }
 
@@ -144,7 +148,7 @@ form#mail_form .message {
 }
 form#mail_form textarea {
 	display: block;
-	width: 490px;
+	width: 98%;
 	height: 250px;
 	resize: vertical;
 	border: 1px solid #000;
@@ -176,12 +180,12 @@ form#mail_form input#postal,
 form#mail_form input#phone,
 form#mail_form input#schedule,
 form#mail_form input#subject {
-	width: 400px;
+	width: 100%;
 }
 
 form#mail_form input#mail_address,
 form#mail_form input#mail_address_confirm {
-	width: 400px;
+	width: 100%;
 }
 
 form#mail_form input#postal+a {
@@ -203,7 +207,7 @@ form#mail_form input#postal+a:hover {
 }
 
 form#mail_form input#address {
-	width: 90%;
+	width: 100%;
 }
 
 form#mail_form input[type="button"]:hover {
